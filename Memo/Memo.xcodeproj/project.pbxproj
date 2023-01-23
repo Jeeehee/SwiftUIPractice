@@ -13,6 +13,8 @@
 		73F834D2297E5A3E00C0C72E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F834D1297E5A3E00C0C72E /* Persistence.swift */; };
 		73F834D5297E5A3E00C0C72E /* Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73F834D3297E5A3E00C0C72E /* Memo.xcdatamodeld */; };
 		73F834DC297E5C3000C0C72E /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F834DB297E5C3000C0C72E /* MainListView.swift */; };
+		73F834E0297E5CB400C0C72E /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F834DF297E5CB400C0C72E /* Memo.swift */; };
+		73F834E2297E70DD00C0C72E /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F834E1297E70DD00C0C72E /* MemoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		73F834D1297E5A3E00C0C72E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		73F834D4297E5A3E00C0C72E /* Memo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Memo.xcdatamodel; sourceTree = "<group>"; };
 		73F834DB297E5C3000C0C72E /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		73F834DF297E5CB400C0C72E /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		73F834E1297E70DD00C0C72E /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 		73F834DE297E5C7B00C0C72E /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				73F834DF297E5CB400C0C72E /* Memo.swift */,
+				73F834E1297E70DD00C0C72E /* MemoStore.swift */,
 			);
 			path = Memory;
 			sourceTree = "<group>";
@@ -159,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F834E0297E5CB400C0C72E /* Memo.swift in Sources */,
+				73F834E2297E70DD00C0C72E /* MemoStore.swift in Sources */,
 				73F834D2297E5A3E00C0C72E /* Persistence.swift in Sources */,
 				73F834DC297E5C3000C0C72E /* MainListView.swift in Sources */,
 				73F834C9297E5A3C00C0C72E /* MemoApp.swift in Sources */,

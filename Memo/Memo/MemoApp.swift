@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct MemoApp: App {
+    @StateObject var store = MemoStore()
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
@@ -16,6 +18,7 @@ struct MemoApp: App {
             // 여기서 리턴하는 뷰가 첫 뷰
             MainListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(store)
         }
     }
 }
