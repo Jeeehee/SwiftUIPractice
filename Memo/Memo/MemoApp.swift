@@ -13,7 +13,8 @@ struct MemoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // 여기서 리턴하는 뷰가 첫 뷰
+            MainListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
