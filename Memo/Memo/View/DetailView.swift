@@ -11,6 +11,9 @@ struct DetailView: View {
     @ObservedObject var memo: Memo
     @EnvironmentObject var store: MemoStore
     @State private var showComposer = false
+    @State private var showDeleteAlert = false
+    
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
@@ -30,11 +33,30 @@ struct DetailView: View {
             }
         }
         .navigationTitle("메모 보기")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            Button {
-                showComposer = true
-            } label: {
-                Image(systemName: "pencil")
+            ToolbarItemGroup(placement: .bottomBar) {
+                Button {
+                    showDeleteAlert = true
+                } label: {
+                    Text("삭제")
+                }
+                .alert("삭제 확인", isPresented: $showDeleteAlert) {
+                    Button(role: .destructive) {
+                        store.delete(memo: memo)
+                        dismiss()
+                    } label: {
+                        Text("삭제")
+                    }
+                } message: {
+                    Text("메모를 삭제할까요?")
+                }
+                
+                Button {
+                    showComposer = true
+                } label: {
+                    Image(systemName: "pencil")
+                }
             }
         }
         .sheet(isPresented: $showComposer) {
